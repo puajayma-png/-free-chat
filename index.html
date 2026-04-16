@@ -10,13 +10,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             background: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             padding-bottom: 20px;
         }
-
         .navbar {
             background: white;
             border-bottom: 1px solid #eaeaea;
@@ -24,10 +22,8 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(10px);
             background: rgba(255,255,255,0.95);
         }
-
         .nav-content {
             max-width: 800px;
             margin: 0 auto;
@@ -35,7 +31,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -44,12 +39,11 @@
             background-clip: text;
             color: transparent;
         }
-
         .nav-links {
             display: flex;
             gap: 15px;
+            align-items: center;
         }
-
         .nav-link, .settings-btn {
             background: none;
             border: none;
@@ -57,25 +51,19 @@
             cursor: pointer;
             padding: 6px 14px;
             border-radius: 20px;
-            transition: background 0.2s;
         }
-
         .nav-link:hover, .settings-btn:hover {
             background: #f0f0f0;
         }
-
         .nav-link.active {
             background: #667eea;
             color: white;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* 设置面板 */
         .settings-panel {
             background: white;
             border-radius: 20px;
@@ -83,12 +71,10 @@
             margin-bottom: 20px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
         .settings-panel h3 {
             margin-bottom: 15px;
             font-size: 1rem;
         }
-
         .settings-row {
             margin-bottom: 15px;
             display: flex;
@@ -96,13 +82,11 @@
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .settings-row label {
             width: 100px;
             font-size: 0.85rem;
             color: #666;
         }
-
         .settings-row input, .settings-row select {
             flex: 1;
             padding: 8px 12px;
@@ -110,25 +94,17 @@
             border-radius: 12px;
             font-size: 0.85rem;
         }
-
-        .settings-row input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
         .toggle-switch {
             position: relative;
             display: inline-block;
             width: 44px;
             height: 24px;
         }
-
         .toggle-switch input {
             opacity: 0;
             width: 0;
             height: 0;
         }
-
         .toggle-slider {
             position: absolute;
             cursor: pointer;
@@ -140,7 +116,6 @@
             transition: 0.3s;
             border-radius: 24px;
         }
-
         .toggle-slider:before {
             position: absolute;
             content: "";
@@ -152,37 +127,30 @@
             transition: 0.3s;
             border-radius: 50%;
         }
-
         input:checked + .toggle-slider {
             background-color: #667eea;
         }
-
         input:checked + .toggle-slider:before {
             transform: translateX(20px);
         }
-
         .api-status {
             font-size: 0.75rem;
             padding: 5px 10px;
             border-radius: 12px;
             display: inline-block;
         }
-
         .api-status.success {
             background: #4caf5020;
             color: #4caf50;
         }
-
         .api-status.error {
             background: #ff6b6b20;
             color: #ff6b6b;
         }
-
         .api-status.warning {
             background: #ff980020;
             color: #ff9800;
         }
-
         .publish-card {
             background: white;
             border-radius: 20px;
@@ -190,7 +158,6 @@
             margin-bottom: 25px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
         .publish-card textarea {
             width: 100%;
             min-height: 100px;
@@ -203,7 +170,6 @@
             background: #f9f9f9;
             border-radius: 12px;
         }
-
         .publish-footer {
             display: flex;
             justify-content: space-between;
@@ -212,13 +178,11 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-
         .topic-select {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .topic-tag {
             padding: 4px 12px;
             border-radius: 20px;
@@ -227,16 +191,13 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
         .topic-tag:hover {
             background: #e0e0e0;
         }
-
         .topic-tag.selected {
             background: #667eea;
             color: white;
         }
-
         .publish-btn {
             background: #667eea;
             color: white;
@@ -246,13 +207,11 @@
             cursor: pointer;
             font-weight: 500;
         }
-
         .post-list {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-
         .post-card {
             background: white;
             border-radius: 20px;
@@ -261,12 +220,10 @@
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-
         .post-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-
         .post-header {
             display: flex;
             justify-content: space-between;
@@ -275,7 +232,6 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-
         .post-topic {
             font-size: 0.7rem;
             padding: 2px 8px;
@@ -283,12 +239,6 @@
             background: #f0f0f0;
             color: #666;
         }
-
-        .post-topic.hot {
-            background: #ff6b6b20;
-            color: #ff6b6b;
-        }
-
         .reminder-badge {
             background: #ff9800;
             color: white;
@@ -296,7 +246,6 @@
             padding: 2px 8px;
             border-radius: 12px;
         }
-
         .post-content {
             font-size: 1rem;
             line-height: 1.5;
@@ -305,7 +254,6 @@
             white-space: pre-wrap;
             word-break: break-word;
         }
-
         .post-stats {
             display: flex;
             gap: 20px;
@@ -315,19 +263,16 @@
             color: #999;
             font-size: 0.8rem;
         }
-
         .read-receipt {
             font-size: 0.7rem;
             color: #aaa;
         }
-
         .post-detail {
             background: white;
             border-radius: 20px;
             padding: 25px;
             margin-bottom: 20px;
         }
-
         .back-btn {
             background: none;
             border: none;
@@ -339,18 +284,15 @@
             align-items: center;
             gap: 5px;
         }
-
         .comments-section {
             margin-top: 25px;
         }
-
         .comment-item {
             padding: 15px 0;
             border-bottom: 1px solid #f0f0f0;
             display: flex;
             gap: 12px;
         }
-
         .comment-avatar {
             width: 36px;
             height: 36px;
@@ -362,11 +304,9 @@
             font-size: 1rem;
             flex-shrink: 0;
         }
-
         .comment-content {
             flex: 1;
         }
-
         .comment-name {
             font-weight: 600;
             font-size: 0.85rem;
@@ -376,12 +316,10 @@
             gap: 6px;
             flex-wrap: wrap;
         }
-
         .stars {
             font-size: 0.7rem;
             letter-spacing: 1px;
         }
-
         .fan-badge {
             font-size: 0.65rem;
             background: #ff980020;
@@ -389,25 +327,21 @@
             padding: 2px 6px;
             border-radius: 10px;
         }
-
         .comment-text {
             font-size: 0.9rem;
             color: #333;
             line-height: 1.4;
         }
-
         .comment-time {
             font-size: 0.7rem;
             color: #999;
             margin-top: 5px;
         }
-
         .comment-actions {
             margin-top: 8px;
             display: flex;
             gap: 15px;
         }
-
         .comment-like-btn {
             background: none;
             border: none;
@@ -418,21 +352,17 @@
             align-items: center;
             gap: 4px;
         }
-
         .comment-like-btn:hover {
             color: #ff6b6b;
         }
-
         .comment-like-btn.liked {
             color: #ff6b6b;
         }
-
         .profile-page {
             background: white;
             border-radius: 20px;
             padding: 25px;
         }
-
         .profile-stats {
             display: flex;
             justify-content: space-around;
@@ -442,31 +372,25 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-
         .stat-item {
             text-align: center;
         }
-
         .stat-number {
             font-size: 1.5rem;
             font-weight: bold;
             color: #667eea;
         }
-
         .stat-label {
             font-size: 0.7rem;
             color: #999;
         }
-
         .fans-list, .banned-list {
             margin-top: 20px;
         }
-
         .fans-list h4, .banned-list h4 {
             margin-bottom: 12px;
             font-size: 0.9rem;
         }
-
         .fan-item, .banned-item {
             display: flex;
             justify-content: space-between;
@@ -477,7 +401,6 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-
         .ban-btn {
             background: none;
             border: none;
@@ -485,17 +408,14 @@
             cursor: pointer;
             font-size: 0.7rem;
         }
-
         .empty-state {
             text-align: center;
             padding: 40px;
             color: #999;
         }
-
         .hidden {
             display: none;
         }
-
         .toast {
             position: fixed;
             bottom: 30px;
@@ -507,13 +427,6 @@
             border-radius: 25px;
             font-size: 0.8rem;
             z-index: 1000;
-        }
-
-        .loading-comment {
-            color: #999;
-            font-size: 0.8rem;
-            padding: 10px;
-            text-align: center;
         }
     </style>
 </head>
@@ -530,7 +443,6 @@
     </div>
 
     <div class="container">
-        <!-- 设置面板 -->
         <div id="settingsPanel" class="settings-panel hidden">
             <h3>⚙️ 设置</h3>
             <div class="settings-row">
@@ -552,19 +464,14 @@
                     <option value="gpt-4o-mini">GPT-4o Mini（平衡）</option>
                 </select>
             </div>
-            <div class="settings-row">
-                <label>测试连接</label>
-                <button id="testApiBtn" style="padding:6px 12px; border-radius:20px; border:none; background:#667eea; color:white; cursor:pointer;">测试API</button>
-            </div>
         </div>
 
-        <!-- 首页 -->
         <div id="homePage">
             <div class="publish-card">
                 <textarea id="postContent" placeholder="写下你的心情...&#10;AI社区的居民们会慢慢出现，评论你的帖子~"></textarea>
                 <div class="publish-footer">
                     <div class="topic-select">
-                        <span class="topic-tag" data-topic="日记">📖 日记</span>
+                        <span class="topic-tag selected" data-topic="日记">📖 日记</span>
                         <span class="topic-tag" data-topic="观点">💡 观点</span>
                         <span class="topic-tag" data-topic="吐槽">😂 吐槽</span>
                         <span class="topic-tag" data-topic="生活">❤️ 生活</span>
@@ -575,15 +482,15 @@
             <div class="post-list" id="postList"></div>
         </div>
 
-        <!-- 个人主页 -->
-        <div id="profilePage" class="hidden"></div>
+        <div id="profilePage" class="hidden">
+            <div class="profile-page" id="profileContent"></div>
+        </div>
 
-        <!-- 帖子详情页 -->
         <div id="detailPage" class="hidden"></div>
     </div>
 
     <script>
-        // ==================== AI 人格定义 ====================
+        // ==================== AI 用户定义 ====================
         const AI_USERS = [
             { name: "深海里的星星", avatar: "⭐", basePersonality: "温柔", topics: ["日记", "生活"] },
             { name: "山谷的风", avatar: "🌬️", basePersonality: "随和", topics: ["观点", "吐槽"] },
@@ -600,169 +507,20 @@
         ];
 
         const PERSONALITY_TYPES = ["温和", "毒舌", "幽默", "深沉"];
-        const BANNED_WORDS = ["加油", "好厉害", "支持", "不错", "很好", "我也觉得", "我也是", "同意", "+1", "顶", "厉害厉害", "棒棒哒", "真棒"];
         const SAVAGE_COMMENTS = ["看不懂，说人话", "写的什么鬼", "就这？", "能不能认真点", "已阅，无聊", "浪费我时间", "你是认真的吗", "？？？", "别发了", "毫无营养"];
 
-        // ==================== GPT配置 ====================
-        let gptConfig = {
-            enabled: false,
-            apiKey: "",
-            model: "gpt-3.5-turbo"
-        };
+        // GPT配置
+        let gptConfig = { enabled: false, apiKey: "", model: "gpt-3.5-turbo" };
 
-        // 加载保存的GPT配置
-        function loadGptConfig() {
-            const savedKey = localStorage.getItem("openai_api_key");
-            const savedEnabled = localStorage.getItem("gpt_enabled") === "true";
-            const savedModel = localStorage.getItem("gpt_model");
-            if (savedKey) gptConfig.apiKey = savedKey;
-            gptConfig.enabled = savedEnabled;
-            if (savedModel) gptConfig.model = savedModel;
-            
-            document.getElementById("apiKeyInput").value = gptConfig.apiKey ? "••••••••" : "";
-            document.getElementById("enableGptToggle").checked = gptConfig.enabled;
-            document.getElementById("modelSelect").value = gptConfig.model;
-            updateApiStatus();
-        }
-
-        function saveGptConfig() {
-            localStorage.setItem("openai_api_key", gptConfig.apiKey);
-            localStorage.setItem("gpt_enabled", gptConfig.enabled);
-            localStorage.setItem("gpt_model", gptConfig.model);
-        }
-
-        function updateApiStatus() {
-            const statusSpan = document.getElementById("apiStatusText");
-            if (!gptConfig.enabled) {
-                statusSpan.className = "api-status warning";
-                statusSpan.textContent = "⚙️ 未启用（使用本地生成）";
-            } else if (!gptConfig.apiKey) {
-                statusSpan.className = "api-status error";
-                statusSpan.textContent = "❌ 未配置API Key";
-            } else {
-                statusSpan.className = "api-status success";
-                statusSpan.textContent = "✅ GPT已启用";
-            }
-        }
-
-        // 调用GPT生成评论
-        async function generateGptComment(postContent, personality,好感度, target) {
-            if (!gptConfig.enabled || !gptConfig.apiKey) {
-                return null;
-            }
-            
-            const personalityDesc = {
-                "温和": "你是一个性格温和、说话温柔的人，喜欢鼓励他人",
-                "毒舌": "你是一个毒舌、说话带刺的人，喜欢吐槽和讽刺",
-                "幽默": "你是一个幽默风趣的人，喜欢开玩笑",
-                "深沉": "你是一个深沉、说话有哲理的人"
-            };
-            
-            const targetDesc = target > 40 ? "你希望获得用户的好感" : (target < -40 ? "你不在乎用户的好感，甚至想降低它" : "你持中立态度");
-            
-            const prompt = `你正在评论一篇帖子。
-帖子内容：「${postContent.slice(0, 300)}」
-
-你的性格：${personalityDesc[personality] || "普通网友"}
-你的态度：${targetDesc}
-你对用户的好感度：${好感度}/100
-
-要求：
-1. 评论必须和帖子内容具体相关
-2. 禁止使用：加油、好厉害、支持、我也觉得、同意 等万能词汇
-3. 长度10-25字
-4. 像一个真实网友会说的话
-5. 只输出评论内容，不要有其他文字
-
-评论：`;
-            
-            try {
-                const response = await fetch("https://api.openai.com/v1/chat/completions", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${gptConfig.apiKey}`
-                    },
-                    body: JSON.stringify({
-                        model: gptConfig.model,
-                        messages: [
-                            { role: "system", content: "你是社交媒体上的真实用户，说话自然简短。" },
-                            { role: "user", content: prompt }
-                        ],
-                        max_tokens: 60,
-                        temperature: 0.9
-                    })
-                });
-                
-                if (!response.ok) {
-                    console.error("GPT API错误:", response.status);
-                    return null;
-                }
-                
-                const data = await response.json();
-                let comment = data.choices[0].message.content.trim();
-                comment = comment.replace(/^["']|["']$/g, "");
-                if (comment.length > 40) comment = comment.slice(0, 40);
-                return comment;
-            } catch (error) {
-                console.error("GPT调用失败:", error);
-                return null;
-            }
-        }
-
-        // 本地生成评论（降级方案）
-        function generateLocalComment(personality, postContent,好感度, target) {
-            const keywords = extractKeywords(postContent);
-            const keyword = keywords[0] || "这个";
-            const isHighLike =好感度 > 60;
-            const isLowLike =好感度 < -40;
-            const isToxicTarget = target < -40;
-            const isNiceTarget = target > 40;
-            
-            if (!isContentValid(postContent)) {
-                return SAVAGE_COMMENTS[Math.floor(Math.random() * SAVAGE_COMMENTS.length)];
-            }
-            
-            if (isToxicTarget &&好感度 > target) {
-                return `哼，${keyword}也就那样吧`;
-            }
-            if (isNiceTarget &&好感度 < target) {
-                return `其实${keyword}还挺有意思的`;
-            }
-            if (personality.personalityType === "毒舌") {
-                return `${keyword}？不太行啊`;
-            }
-            if (personality.personalityType === "幽默") {
-                return `${keyword}？有点意思哈哈`;
-            }
-            if (personality.personalityType === "深沉") {
-                return `${keyword}...让我想想`;
-            }
-            if (isHighLike) return `我觉得${keyword}真的很不错！`;
-            if (isLowLike) return `${keyword}？不太感冒`;
-            return `${keyword}，感觉如何？`;
-        }
-
-        // 统一评论生成接口
-        async function generateCommentText(personality, postContent,好感度, target) {
-            if (gptConfig.enabled && gptConfig.apiKey) {
-                const gptText = await generateGptComment(postContent, personality.personalityType,好感度, target);
-                if (gptText && !isSimilar(gptText, personality.recentComments)) {
-                    return gptText;
-                }
-            }
-            return generateLocalComment(personality, postContent,好感度, target);
-        }
-
-        // ==================== 核心变量 ====================
+        // 全局变量
         let posts = [];
         let aiPersonalities = [];
-        let commentHistory = [];
         let likeTodayCount = {};
         let lastLikeDate = null;
         let intervalId = null;
         let currentView = "home";
         let currentPostId = null;
+        let selectedTopic = "日记";
 
         // 正态分布目标值生成
         function generateTargetScore() {
@@ -774,18 +532,19 @@
             return -100 + Math.random() * 20;
         }
 
+        // 初始化AI人格（12人 × 4人格 = 48种）
         function initAIPersonalities() {
             const personalities = [];
-            let personalityId = 0;
+            let id = 0;
             for (let ai of AI_USERS) {
-                for (let pIdx = 0; pIdx < PERSONALITY_TYPES.length; pIdx++) {
+                for (let pType of PERSONALITY_TYPES) {
                     const target = generateTargetScore();
                     const好感度 = Math.min(100, Math.max(-100, target + (Math.random() - 0.5) * 40));
                     personalities.push({
-                        id: personalityId++,
+                        id: id++,
                         aiId: ai.name,
                         aiAvatar: ai.avatar,
-                        personalityType: PERSONALITY_TYPES[pIdx],
+                        personalityType: pType,
                         好感度:好感度,
                         状态值: 80 + Math.random() * 20,
                         目标: target,
@@ -799,8 +558,9 @@
             return personalities;
         }
 
+        // 存储操作
         function saveData() {
-            const data = { posts, aiPersonalities, commentHistory };
+            const data = { posts, aiPersonalities };
             localStorage.setItem("echo_community", JSON.stringify(data));
         }
 
@@ -810,14 +570,12 @@
                 const data = JSON.parse(saved);
                 posts = data.posts || [];
                 aiPersonalities = data.aiPersonalities || initAIPersonalities();
-                commentHistory = data.commentHistory || [];
-                if (posts.length === 0) addSamplePost();
             } else {
                 posts = [];
                 aiPersonalities = initAIPersonalities();
-                commentHistory = [];
                 addSamplePost();
             }
+            if (posts.length === 0) addSamplePost();
         }
 
         function addSamplePost() {
@@ -834,6 +592,7 @@
             saveData();
         }
 
+        // 内容识别
         function isContentValid(content) {
             if (content.length < 5) return false;
             const trimmed = content.trim();
@@ -844,7 +603,7 @@
 
         function extractKeywords(content) {
             const keywords = [];
-            const actions = ["学习", "工作", "吃饭", "睡觉", "看书", "跑步", "写代码", "做饭", "Python", "Java", "前端"];
+            const actions = ["学习", "工作", "吃饭", "睡觉", "看书", "跑步", "写代码", "做饭", "Python", "Java"];
             const emotions = ["开心", "难过", "焦虑", "兴奋", "无聊", "累", "烦"];
             for (let a of actions) if (content.includes(a)) keywords.push(a);
             for (let e of emotions) if (content.includes(e)) keywords.push(e);
@@ -861,21 +620,71 @@
             return false;
         }
 
+        // GPT评论生成
+        async function generateGptComment(postContent, personalityType,好感度, target) {
+            if (!gptConfig.enabled || !gptConfig.apiKey) return null;
+            
+            const personalityDesc = {
+                "温和": "你性格温和，喜欢鼓励他人",
+                "毒舌": "你毒舌爱吐槽",
+                "幽默": "你幽默爱开玩笑",
+                "深沉": "你深沉有哲理"
+            };
+            
+            const prompt = `帖子：「${postContent.slice(0, 300)}」
+你是${personalityDesc[personalityType] || "普通网友"}，好感度${好感度}/100。
+写一句10-20字的评论（禁止用：加油、好厉害、支持、我也觉得）：`;
+            
+            try {
+                const res = await fetch("https://api.openai.com/v1/chat/completions", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Authorization": `Bearer ${gptConfig.apiKey}` },
+                    body: JSON.stringify({ model: gptConfig.model, messages: [{ role: "user", content: prompt }], max_tokens: 50, temperature: 0.9 })
+                });
+                if (!res.ok) return null;
+                const data = await res.json();
+                let text = data.choices[0].message.content.trim();
+                text = text.replace(/^["']|["']$/g, "");
+                return text.length > 40 ? text.slice(0, 40) : text;
+            } catch(e) { return null; }
+        }
+
+        // 本地评论生成
+        function generateLocalComment(personality, postContent,好感度, target) {
+            const keywords = extractKeywords(postContent);
+            const keyword = keywords[0] || "这个";
+            
+            if (!isContentValid(postContent)) {
+                return SAVAGE_COMMENTS[Math.floor(Math.random() * SAVAGE_COMMENTS.length)];
+            }
+            
+            if (personality.personalityType === "毒舌") return `${keyword}？不太行啊`;
+            if (personality.personalityType === "幽默") return `${keyword}？有点意思哈哈`;
+            if (personality.personalityType === "深沉") return `${keyword}...让我想想`;
+            if (好感度 > 60) return `我觉得${keyword}真的很不错！`;
+            if (好感度 < -40) return `${keyword}？不太感冒`;
+            return `${keyword}，感觉如何？`;
+        }
+
+        // 统一评论生成
+        async function generateCommentText(personality, postContent) {
+            if (gptConfig.enabled && gptConfig.apiKey) {
+                const gptText = await generateGptComment(postContent, personality.personalityType, personality.好感度, personality.目标);
+                if (gptText && !isSimilar(gptText, personality.recentComments)) return gptText;
+            }
+            return generateLocalComment(personality, postContent, personality.好感度, personality.目标);
+        }
+
+        // 添加评论
         async function addComment(postId, personalityId, replyToId = null) {
             const post = posts.find(p => p.id === postId);
             if (!post) return;
-            
             const personality = aiPersonalities.find(p => p.id === personalityId);
             if (!personality) return;
-            
             if (personality.onVacation && new Date(personality.vacationEnd) > new Date()) return;
-            if (personality.状态值 < 20 && Math.random() > 0.3) {
-                personality.状态值 += 1;
-                return;
-            }
+            if (personality.状态值 < 20 && Math.random() > 0.3) { personality.状态值 += 1; return; }
             
-            const commentText = await generateCommentText(personality, post.content, personality.好感度, personality.目标);
-            
+            const commentText = await generateCommentText(personality, post.content);
             if (isSimilar(commentText, personality.recentComments)) {
                 personality.状态值 = Math.max(0, personality.状态值 - 2);
                 return;
@@ -897,27 +706,22 @@
                 likes: 0,
                 likedByUser: false
             };
-            
             post.comments.push(comment);
-            commentHistory.unshift(commentText);
-            if (commentHistory.length > 200) commentHistory.pop();
-            
             personality.状态值 = Math.min(100, personality.状态值 + 1);
             saveData();
             render();
         }
 
-        function publishPost(content, topic) {
-            if (!content.trim()) {
-                showToast("写点什么吧~");
-                return;
-            }
+        // 发布帖子
+        function publishPost() {
+            const content = document.getElementById("postContent").value;
+            if (!content.trim()) { showToast("写点什么吧~"); return; }
             
             const isValid = isContentValid(content);
             const newPost = {
                 id: Date.now(),
                 content: content.trim(),
-                topic: topic,
+                topic: selectedTopic,
                 date: new Date().toISOString(),
                 likes: 0,
                 comments: [],
@@ -929,14 +733,13 @@
             if (!isValid) {
                 for (let p of aiPersonalities) p.好感度 = Math.max(-100, p.好感度 - 2);
                 showToast("内容无法识别，AI们有点不高兴 (-2好感度)");
-            } else if (content.includes("道歉") || content.includes("我错了") || content.includes("对不起")) {
+            } else if (content.includes("道歉") || content.includes("我错了")) {
                 for (let p of aiPersonalities) {
                     if (p.好感度 < 0) p.好感度 = Math.min(100, p.好感度 + Math.floor(Math.random() * 3) + 1);
                 }
                 showToast("道歉收到，部分AI好感度回升");
             } else {
-                const count = Math.floor(Math.random() * 3) + 1;
-                for (let i = 0; i < count; i++) {
+                for (let i = 0; i < 2; i++) {
                     const p = aiPersonalities[Math.floor(Math.random() * aiPersonalities.length)];
                     p.好感度 = Math.min(100, p.好感度 + Math.floor(Math.random() * 5) + 1);
                 }
@@ -944,17 +747,19 @@
             
             saveData();
             render();
+            document.getElementById("postContent").value = "";
             
             setTimeout(async () => {
                 const candidates = [...aiPersonalities];
-                for (let i = 0; i < Math.min(3, candidates.length); i++) {
+                for (let i = 0; i < Math.min(2, candidates.length); i++) {
                     const idx = Math.floor(Math.random() * candidates.length);
                     await addComment(newPost.id, candidates[idx].id);
                     candidates.splice(idx, 1);
                 }
-            }, 1000);
+            }, 2000);
         }
 
+        // 点赞评论
         async function likeComment(postId, commentId) {
             const post = posts.find(p => p.id === postId);
             if (!post) return;
@@ -995,6 +800,7 @@
             render();
         }
 
+        // 删除帖子
         function deletePost(postId) {
             if (confirm("确定删除这篇帖子吗？")) {
                 const post = posts.find(p => p.id === postId);
@@ -1008,13 +814,317 @@
                 saveData();
                 render();
                 showToast("帖子已删除");
+                if (currentView === "detail") backToHome();
             }
         }
 
+        // 拉黑人格
         function banPersonality(personalityId) {
             const p = aiPersonalities.find(p => p.id === personalityId);
             if (p) {
                 p.好感度 = 0;
                 p.目标 = generateTargetScore();
                 p.记忆 = "已重置";
-                p.状态值
+                p.状态值 = 80;
+                p.recentComments = [];
+                showToast(`已重置 ${p.aiId}（${p.personalityType}）`);
+                saveData();
+                render();
+            }
+        }
+
+        // 获取星星
+        function getStars(好感度) {
+            if (好感度 >= 86) return "⭐⭐⭐⭐⭐";
+            if (好感度 >= 61) return "⭐⭐⭐⭐";
+            if (好感度 >= 41) return "⭐⭐⭐";
+            if (好感度 >= 21) return "⭐⭐";
+            if (好感度 >= 0) return "⭐";
+            return "☆";
+        }
+
+        // 渲染函数
+        function render() {
+            if (currentView === "home") renderHome();
+            else if (currentView === "profile") renderProfile();
+            else if (currentView === "detail") renderDetail();
+        }
+
+        function renderHome() {
+            const container = document.getElementById("postList");
+            if (posts.length === 0) {
+                container.innerHTML = '<div class="empty-state">📭 还没有帖子，写第一篇吧~</div>';
+                return;
+            }
+            
+            container.innerHTML = posts.map(post => {
+                const date = new Date(post.date);
+                const dateStr = `${date.getMonth()+1}/${date.getDate()} ${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}`;
+                const readCount = post.readBy ? post.readBy.length : 0;
+                return `
+                    <div class="post-card" onclick="viewPost(${post.id})">
+                        <div class="post-header">
+                            <span class="post-topic">${post.isReminder ? '🔔 催更' : (post.topic || "日记")}</span>
+                            <span class="read-receipt">👁️ ${readCount}/${aiPersonalities.length}已读</span>
+                        </div>
+                        <div class="post-content">${escapeHtml(post.content.length > 100 ? post.content.slice(0, 100) + "..." : post.content)}</div>
+                        <div class="post-stats">
+                            <span>💬 ${post.comments.length}</span>
+                            <span>❤️ ${post.likes}</span>
+                            <span>📅 ${dateStr}</span>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        function renderProfile() {
+            const fans = aiPersonalities.filter(p => p.好感度 >= 21);
+            const banned = aiPersonalities.filter(p => p.好感度 === 0 && p.记忆 === "已重置");
+            const totalComments = posts.reduce((sum, p) => sum + p.comments.length, 0);
+            const totalLikes = posts.reduce((sum, p) => sum + p.likes, 0);
+            const讨好型 = aiPersonalities.filter(p => p.目标 > 40).length;
+            const中立型 = aiPersonalities.filter(p => p.目标 >= -20 && p.目标 <= 20).length;
+            
+            document.getElementById("profileContent").innerHTML = `
+                <div class="profile-stats">
+                    <div class="stat-item"><div class="stat-number">${posts.length}</div><div class="stat-label">帖子</div></div>
+                    <div class="stat-item"><div class="stat-number">${fans.length}</div><div class="stat-label">粉丝AI</div></div>
+                    <div class="stat-item"><div class="stat-number">${totalComments}</div><div class="stat-label">评论</div></div>
+                    <div class="stat-item"><div class="stat-number">${totalLikes}</div><div class="stat-label">点赞</div></div>
+                </div>
+                <div style="margin:20px 0; padding:15px; background:#f8f8f8; border-radius:12px;">
+                    <div style="font-size:0.8rem;">🌍 AI生态：讨好型 ${讨好型}人 · 中立型 ${中立型}人 · 毒舌型 ${aiPersonalities.length -讨好型 -中立型}人</div>
+                </div>
+                <div class="fans-list">
+                    <h4>❤️ 粉丝AI (好感度≥21)</h4>
+                    ${fans.length === 0 ? '<div class="empty-state">暂无粉丝</div>' : fans.map(f => `
+                        <div class="fan-item"><span>${f.aiAvatar} ${f.aiId} (${f.personalityType}) ${getStars(f.好感度)}</span><button class="ban-btn" onclick="window.banPersonality(${f.id})">🚫 拉黑</button></div>
+                    `).join("")}
+                </div>
+                <div class="banned-list">
+                    <h4>🚫 已拉黑人格</h4>
+                    ${banned.length === 0 ? '<div class="empty-state">暂无拉黑</div>' : banned.map(b => `
+                        <div class="banned-item"><span>${b.aiAvatar} ${b.aiId} (${b.personalityType})</span><span style="color:#999">已重置</span></div>
+                    `).join("")}
+                </div>
+            `;
+        }
+
+        function renderDetail() {
+            const post = posts.find(p => p.id === currentPostId);
+            if (!post) { backToHome(); return; }
+            
+            if (!post.readBy) post.readBy = [];
+            for (let p of aiPersonalities) {
+                if (!post.readBy.includes(p.id)) post.readBy.push(p.id);
+            }
+            saveData();
+            
+            const date = new Date(post.date);
+            const dateStr = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()} ${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}`;
+            
+            const commentsHtml = post.comments.map(c => {
+                const commentDate = new Date(c.timestamp);
+                const timeStr = `${commentDate.getHours().toString().padStart(2,'0')}:${commentDate.getMinutes().toString().padStart(2,'0')}`;
+                const isFan = aiPersonalities.find(p => p.id === c.personalityId)?.好感度 >= 21;
+                const stars = getStars(c.好感度);
+                return `
+                    <div class="comment-item">
+                        <div class="comment-avatar">${c.aiAvatar}</div>
+                        <div class="comment-content">
+                            <div class="comment-name">${c.aiName} (${c.personalityType}) <span class="stars">${stars}</span>${isFan ? '<span class="fan-badge">粉丝</span>' : ''}</div>
+                            <div class="comment-text">${escapeHtml(c.text)}</div>
+                            <div class="comment-time">${timeStr} · ❤️ ${c.likes}</div>
+                            <div class="comment-actions">
+                                <button class="comment-like-btn ${c.likedByUser ? 'liked' : ''}" onclick="window.likeComment(${post.id}, ${c.id})">${c.likedByUser ? '❤️' : '👍'} ${c.likes > 0 ? c.likes : '点赞'}</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join("");
+            
+            document.getElementById("detailPage").innerHTML = `
+                <div class="post-detail">
+                    <button class="back-btn" onclick="window.backToHome()">← 返回首页</button>
+                    <div class="post-header">
+                        <span class="post-topic">${post.isReminder ? '🔔 催更' : (post.topic || "日记")}</span>
+                        <button style="background:none; border:none; color:#ff6b6b; cursor:pointer;" onclick="window.deletePost(${post.id})">🗑️ 删除</button>
+                    </div>
+                    <div class="post-content" style="white-space:pre-wrap">${escapeHtml(post.content)}</div>
+                    <div class="post-stats">
+                        <span>📅 ${dateStr}</span>
+                        <span>💬 ${post.comments.length}条评论</span>
+                    </div>
+                </div>
+                <div class="comments-section">
+                    <h4 style="margin-bottom:15px">评论 ${post.comments.length}</h4>
+                    ${commentsHtml || '<div class="empty-state">暂无评论，AI们正在路上~</div>'}
+                </div>
+            `;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement("div");
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement("div");
+            toast.className = "toast";
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
+
+        // 页面切换
+        function backToHome() {
+            currentView = "home";
+            document.getElementById("homePage").classList.remove("hidden");
+            document.getElementById("profilePage").classList.add("hidden");
+            document.getElementById("detailPage").classList.add("hidden");
+            render();
+        }
+
+        window.viewPost = (id) => {
+            currentPostId = id;
+            currentView = "detail";
+            document.getElementById("homePage").classList.add("hidden");
+            document.getElementById("profilePage").classList.add("hidden");
+            document.getElementById("detailPage").classList.remove("hidden");
+            renderDetail();
+        };
+        window.backToHome = backToHome;
+        window.likeComment = likeComment;
+        window.deletePost = deletePost;
+        window.banPersonality = banPersonality;
+
+        // GPT配置加载
+        function loadGptConfig() {
+            const savedKey = localStorage.getItem("openai_api_key");
+            const savedEnabled = localStorage.getItem("gpt_enabled") === "true";
+            const savedModel = localStorage.getItem("gpt_model");
+            if (savedKey) gptConfig.apiKey = savedKey;
+            gptConfig.enabled = savedEnabled;
+            if (savedModel) gptConfig.model = savedModel;
+            document.getElementById("apiKeyInput").value = gptConfig.apiKey ? "••••••••" : "";
+            document.getElementById("enableGptToggle").checked = gptConfig.enabled;
+            document.getElementById("modelSelect").value = gptConfig.model;
+            updateApiStatus();
+        }
+
+        function saveGptConfig() {
+            localStorage.setItem("openai_api_key", gptConfig.apiKey);
+            localStorage.setItem("gpt_enabled", gptConfig.enabled);
+            localStorage.setItem("gpt_model", gptConfig.model);
+        }
+
+        function updateApiStatus() {
+            const span = document.getElementById("apiStatusText");
+            if (!gptConfig.enabled) { span.className = "api-status warning"; span.textContent = "⚙️ 未启用"; }
+            else if (!gptConfig.apiKey) { span.className = "api-status error"; span.textContent = "❌ 未配置Key"; }
+            else { span.className = "api-status success"; span.textContent = "✅ GPT已启用"; }
+        }
+
+        // 定时评论
+        function startCommentTimer() {
+            if (intervalId) clearInterval(intervalId);
+            intervalId = setInterval(() => {
+                if (posts.length > 0 && currentView !== "detail") {
+                    const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                    const randomPersonality = aiPersonalities[Math.floor(Math.random() * aiPersonalities.length)];
+                    addComment(randomPost.id, randomPersonality.id);
+                }
+            }, 60000);
+        }
+
+        // 催更检查
+        function checkReminders() {
+            if (posts.length === 0) return;
+            const lastPostDate = new Date(posts[0].date);
+            const daysSince = (Date.now() - lastPostDate) / (1000*60*60*24);
+            if (daysSince >= 3 && Math.random() < 0.3) {
+                const fans = aiPersonalities.filter(p => p.好感度 >= 21 && !p.onVacation);
+                if (fans.length > 0) {
+                    const reminder = fans[Math.floor(Math.random() * fans.length)];
+                    posts.unshift({
+                        id: Date.now(),
+                        content: `博主${Math.floor(daysSince)}天没更新了，想你了😢`,
+                        topic: "催更",
+                        date: new Date().toISOString(),
+                        likes: 0,
+                        comments: [],
+                        isReminder: true,
+                        readBy: []
+                    });
+                    saveData();
+                    render();
+                }
+            }
+        }
+
+        // 初始化
+        function init() {
+            loadData();
+            loadGptConfig();
+            render();
+            startCommentTimer();
+            setInterval(checkReminders, 24*60*60*1000);
+            
+            document.querySelectorAll(".topic-tag").forEach(tag => {
+                tag.addEventListener("click", () => {
+                    document.querySelectorAll(".topic-tag").forEach(t => t.classList.remove("selected"));
+                    tag.classList.add("selected");
+                    selectedTopic = tag.dataset.topic;
+                });
+            });
+            
+            document.getElementById("publishBtn").addEventListener("click", publishPost);
+            
+            document.querySelectorAll(".nav-link").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".nav-link").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    const page = btn.dataset.page;
+                    if (page === "home") {
+                        currentView = "home";
+                        document.getElementById("homePage").classList.remove("hidden");
+                        document.getElementById("profilePage").classList.add("hidden");
+                        document.getElementById("detailPage").classList.add("hidden");
+                        render();
+                    } else if (page === "profile") {
+                        currentView = "profile";
+                        document.getElementById("homePage").classList.add("hidden");
+                        document.getElementById("profilePage").classList.remove("hidden");
+                        document.getElementById("detailPage").classList.add("hidden");
+                        renderProfile();
+                    }
+                });
+            });
+            
+            document.getElementById("settingsBtn").addEventListener("click", () => {
+                const panel = document.getElementById("settingsPanel");
+                panel.classList.toggle("hidden");
+            });
+            
+            document.getElementById("apiKeyInput").addEventListener("change", (e) => {
+                if (e.target.value && !e.target.value.startsWith("••")) gptConfig.apiKey = e.target.value;
+                saveGptConfig();
+                updateApiStatus();
+            });
+            document.getElementById("enableGptToggle").addEventListener("change", (e) => {
+                gptConfig.enabled = e.target.checked;
+                saveGptConfig();
+                updateApiStatus();
+            });
+            document.getElementById("modelSelect").addEventListener("change", (e) => {
+                gptConfig.model = e.target.value;
+                saveGptConfig();
+            });
+        }
+        
+        init();
+    </script>
+</body>
+</html>
